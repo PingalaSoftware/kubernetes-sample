@@ -1,0 +1,10 @@
+https://cloud.google.com/sdk/docs/
+
+gcloud components install kubectl
+
+gcloud auth configure-docker
+
+docker build -t asia.gcr.io/[projectid]/[servicename] .
+
+docker push asia.gcr.io/[projectid]/[servicename]:version
+

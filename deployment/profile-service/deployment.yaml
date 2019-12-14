@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: profile-service-deployment
+  labels:
+    service: profile
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: profile
+  template:
+    metadata:
+      labels:
+        service: profile
+    spec:
+      containers:
+      - name: profile-service
+        image: hello-world
+        ports:
+        - containerPort: 3000
